@@ -12,3 +12,5 @@ Since I expect to afford large image data when conditions are available, label p
 
 ## Performance
 The performances on two dataset(the reduced dataset and the entire dataset) are almost identically perfect. However, it is worth noticing that CNN with the reduced dataset use less epoch to accomplish the task whereas the entire dataset use more epoches and more time per epoch. When we enlarge the dataset, the difference will become more significant.
+
+The performance of models of full dataset and reduced dataset is shown as below, respectively:
