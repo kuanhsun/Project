@@ -4,6 +4,14 @@ This a photo of 'Psilopogon nuchalis'.(also known as Taiwan barbet)
 ![image](6B1A0315.JPG)
 This a photo of 'Pycnonotus sinensis'.
 ![image](6B1A2900.JPG)
+
+## Instruction
+Since the image dataset is under maintenance, it is not available to enclose it with this project on GitHub. However, if interested, readers are encouraged to download the .ipynb file I provided with and utilize it with your own dataset. 
+
+Moreover, if the readers want to give my model a try, there is a sample code if you download 'model_v2.h5':
+```py
+   model = tf.keras.models.load_model('model_v1.h5')
+```
 ## Database
 We expect to introduce two databases into this project. MongoDB is implemented owing to its outstanding extendability and we store images and labels here. MySQL is planned to be used to collect metadata from images thereselves; however, I did not put it in use since the image data itself is the core I want to process.
 
@@ -16,6 +24,3 @@ The performances on two dataset(the reduced dataset and the entire dataset) are 
 The performance of models of full dataset and reduced dataset is shown as below, respectively:
 ![image](model1.png)
 ![image](model2.png)
-
-## Instruction
-Since the image dataset is under maintenance, it is not available to enclose it with this project on GitHub. However, if interested, readers are encouraged to download the ipynb file I provided with and utilize it with your own dataset. 
