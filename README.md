@@ -8,15 +8,21 @@ This a photo of 'Pycnonotus sinensis'.
 ## Instruction
 Since the image dataset is under maintenance, it is not available to enclose it with this project on GitHub. However, if interested, readers are encouraged to download the .ipynb file I provided with and utilize it with your own dataset. 
 
-Moreover, if the readers want to give my model a try, there is a sample code if you download 'model_v2.h5':
+Moreover, if the readers want to give my model a try, there is a sample code if you download 'model_v2.h5' and try it with python code:
 ```py
+   import cv2
+   import tensorflow as tf
+   import numpy as np
+   
    model = tf.keras.models.load_model('model_v1.h5')
+   
    def read_img(path):
     img = cv2.imread(path)
     img = cv2.resize(img,(180,180))
     img = np.expand_dims(img,axis=0)
     img = img/255.
     return img
+   
    image = read_img(path_you_provide)
    model.predict(image)
 ```
