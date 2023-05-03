@@ -16,15 +16,26 @@ Moreover, if the readers want to give my model a try, there is a sample code if 
    
    model = tf.keras.models.load_model('model_v1.h5')
    
-   def read_img(path):
+   def img_read(path):
     img = cv2.imread(path)
-    img = cv2.resize(img,(180,180))
+    img = cv2.resize(img,(256,256))
     img = np.expand_dims(img,axis=0)
     img = img/255.
     return img
+
+
+   def predict_img(path,model):
+    img = img_read(path)
+    predict = model_Kmeans.predict(img)
+    predicted_class =np.argmax(predict,axis=1)
+
+    if(predicted_class[0] == 1):
+        print("This is Pycnonotus sinensis!")
+    else:
+        print("This is Psilopogon nuchalis!")
    
    image = read_img(path_you_provide)
-   model.predict(image)
+   predict_img
 ```
 ## Database
 We expect to introduce two databases into this project. MongoDB is implemented owing to its outstanding extendability and we store images and labels here. MySQL is planned to be used to collect metadata from images thereselves; however, I did not put it in use since the image data itself is the core I want to process.
