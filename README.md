@@ -37,6 +37,16 @@ Moreover, if the readers want to give my model a try, there is a sample code if 
    image = read_img(path_you_provide)
    predict_img
 ```
+This is an attempt using 'model_v2.h5' and a image of Pycnonotus sinensis from e-info.org.tw:
+```py
+   model_Kmeans =  tf.keras.models.load_model('model_v2.h5')
+   predict_img('/Users/wuguanxun/Desktop/Pycnonotus-sinensis-3.jpeg',model_Kmeans)
+```
+The result is 
+```py
+   1/1 [==============================] - 0s 16ms/step
+   This is Pycnonotus sinensis!
+```
 ## Database
 We expect to introduce two databases into this project. MongoDB is implemented owing to its outstanding extendability and we store images and labels here. MySQL is planned to be used to collect metadata from images thereselves; however, I did not put it in use since the image data itself is the core I want to process.
 
