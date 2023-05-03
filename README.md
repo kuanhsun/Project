@@ -11,6 +11,14 @@ Since the image dataset is under maintenance, it is not available to enclose it 
 Moreover, if the readers want to give my model a try, there is a sample code if you download 'model_v2.h5':
 ```py
    model = tf.keras.models.load_model('model_v1.h5')
+   def read_img(path):
+    img = cv2.imread(path)
+    img = cv2.resize(img,(180,180))
+    img = np.expand_dims(img,axis=0)
+    img = img/255.
+    return img
+   image = read_img(path_you_provide)
+   model.predict(image)
 ```
 ## Database
 We expect to introduce two databases into this project. MongoDB is implemented owing to its outstanding extendability and we store images and labels here. MySQL is planned to be used to collect metadata from images thereselves; however, I did not put it in use since the image data itself is the core I want to process.
