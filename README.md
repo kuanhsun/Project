@@ -16,3 +16,6 @@ The performances on two dataset(the reduced dataset and the entire dataset) are 
 The performance of models of full dataset and reduced dataset is shown as below, respectively:
 ![image](model1.png)
 ![image](model2.png)
+
+## Instruction
+Since the image dataset is under maintenance, it is not available to enclose it with this project on GitHub. However, if interested, readers are encouraged to download the ipynb file I provided with and utilize it with your own dataset. 
