@@ -38,7 +38,7 @@ Moreover, if the readers want to give my model a try, there is a sample code if 
    predict_img
 ```
 This is an attempt using 'model_v2.h5' and a image of Pycnonotus sinensis from myself (not used in training):
-![image](6B1A2900.JPG)
+![image](20228079.jpeg)
 ```py
    model_Kmeans =  tf.keras.models.load_model('model_v2.h5')
    predict_img('/Users/wuguanxun/Desktop/20228079.jpeg',model_Kmeans)
