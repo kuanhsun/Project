@@ -50,7 +50,7 @@ The result is
    >>> This is Pycnonotus sinensis!
 ```
 ## Database
-We expect to introduce two databases into this project. MongoDB is implemented owing to its outstanding extendability and we store images and labels here. MySQL is planned to be used to collect metadata from images thereselves; however, I did not put it in use since the image data itself is the core I want to process.
+We introduce two databases into this project. MongoDB is implemented owing to its outstanding extendability and we store images and labels here. MySQL is planned to be used to collect metadata from images thereselves.
 
 ## Method
 Since I expect to afford large image data when conditions are available, label propagation with K-Means is used to pick samples that are more representative. After selecting quality samples, we input our images data (256x256x3) into CNN.
